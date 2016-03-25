@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  motif: MyString
+  date: 2016-03-25
+  origine: MyString
+  destination: MyString
+  distance: 1
+  user_id: 
+
+two:
+  motif: MyString
+  date: 2016-03-25
+  origine: MyString
+  destination: MyString
+  distance: 1
+  user_id: 

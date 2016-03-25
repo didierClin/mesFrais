@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Motif:</strong>
+  <%= @registre.motif %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @registre.date %>
+</p>
+
+<p>
+  <strong>Origine:</strong>
+  <%= @registre.origine %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @registre.destination %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @registre.distance %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @registre.user %>
+</p>
+
+<%= link_to 'Edit', edit_registre_path(@registre) %> |
+<%= link_to 'Back', registres_path %>
