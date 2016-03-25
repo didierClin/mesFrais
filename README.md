@@ -15,3 +15,8 @@ Creation d'un user (salarié), utilisation de la gem devise pour les futures aut
 User = nom, picture
 
 creer ensuite un registre qui sera un ensemble de notes de frais correspondant à un salarié. (dependant)
+
+** Amélioration: **
+C’est très casse-pieds de saisir les distances alors qu’on a déjà saisi un trajet pour un autre déplacement… on peut pas faciliter la vie de l’utilisateur ?
+
+Pourquoi pas nommer et enregistrer les trajets? un peu comme sur le site sncf on retrouve facilement un écran pré-rempli.
