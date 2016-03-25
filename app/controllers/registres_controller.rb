@@ -26,10 +26,11 @@ class RegistresController < ApplicationController
   # POST /registres.json
   def create
     @registre = Registre.new(registre_params)
+    @registre.user_id = current_user.id
 
     respond_to do |format|
       if @registre.save
-        format.html { redirect_to @registre, notice: 'Registre was successfully created.' }
+        format.html { redirect_to @registre, notice: 'La note est crée avec succes.' }
         format.json { render :show, status: :created, location: @registre }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class RegistresController < ApplicationController
   def update
     respond_to do |format|
       if @registre.update(registre_params)
-        format.html { redirect_to @registre, notice: 'Registre was successfully updated.' }
+        format.html { redirect_to @registre, notice: 'La note est mise à jour avec succès.' }
         format.json { render :show, status: :ok, location: @registre }
       else
         format.html { render :edit }
@@ -57,7 +58,7 @@ class RegistresController < ApplicationController
   def destroy
     @registre.destroy
     respond_to do |format|
-      format.html { redirect_to registres_url, notice: 'Registre was successfully destroyed.' }
+      format.html { redirect_to registres_url, notice: 'La note est supprimée.' }
       format.json { head :no_content }
     end
   end
