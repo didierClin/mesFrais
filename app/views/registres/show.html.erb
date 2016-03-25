@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Motif:</strong>
+  <strong>Motif du deplacement:</strong>
   <%= @registre.motif %>
 </p>
 
@@ -25,10 +25,6 @@
   <%= @registre.distance %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @registre.user %>
-</p>
 
-<%= link_to 'Edit', edit_registre_path(@registre) %> |
-<%= link_to 'Back', registres_path %>
+<%= link_to 'Editer', edit_registre_path(@registre), class: 'btn btn-warning' %> |
+<%= link_to 'Retour', registres_path, class: 'btn btn-warning' %>

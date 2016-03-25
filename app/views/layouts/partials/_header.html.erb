@@ -9,7 +9,7 @@
          <% if user_signed_in? %>
            <ul class="nav navbar-nav navbar-right">
              <li>
-               < %= link_to "Créer un post", new_post_path %>
+               <%= link_to "Nouvelle note de frais", new_registre_path, class: 'btn btn-alert' %>
              </li>
              <li>
                <%= link_to "Compte",  edit_user_registration_path %>

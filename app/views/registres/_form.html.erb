@@ -1,7 +1,7 @@
 <%= form_for(@registre) do |f| %>
   <% if @registre.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@registre.errors.count, "error") %> prohibited this registre from being saved:</h2>
+      <h2><%= pluralize(@registre.errors.count, "error") %> ont empéché l'enregistrement de cette note de frais:</h2>
 
       <ul>
       <% @registre.errors.full_messages.each do |message| %>
@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :motif %><br>
+    <%= f.label :'Motif du déplacement' %><br>
     <%= f.text_field :motif %>
   </div>
   <div class="field">
@@ -20,7 +20,7 @@
     <%= f.date_select :date %>
   </div>
   <div class="field">
-    <%= f.label :origine %><br>
+    <%= f.label :'Lieu de départ' %><br>
     <%= f.text_field :origine %>
   </div>
   <div class="field">
@@ -28,14 +28,10 @@
     <%= f.text_field :destination %>
   </div>
   <div class="field">
-    <%= f.label :distance %><br>
+    <%= f.label :'Nombre de kilomètres' %><br>
     <%= f.number_field :distance %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
+  </div><br>
   <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit 'Enregistrer'%>
+  </div><br>
 <% end %>

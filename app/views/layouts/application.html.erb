@@ -7,9 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <!-- add notice messages -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <!-- Add helper for display messages -->
+    <div class="message"> <%= flash_messages %></div>
 
     <%= render 'layouts/partials/header' %>
 
