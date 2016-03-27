@@ -6,6 +6,7 @@ class RegistresController < ApplicationController
   # GET /registres.json
   def index
     @registres = Registre.all
+    @total = @registres.sum(:distance)
   end
 
   # GET /registres/1
