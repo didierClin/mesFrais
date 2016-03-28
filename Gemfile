@@ -34,6 +34,7 @@ end
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'seed_dump'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
