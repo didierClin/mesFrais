@@ -6,7 +6,13 @@ class RegistresController < ApplicationController
   # GET /registres.json
   def index
     @registres = Registre.all
-    @total = @registres.sum(:distance)
+    # @total = @registres.sum(:distance)
+    @total = 0
+    @registres.each do |reg|
+      if (reg.date.mon == Time.now.mon)
+            @total = @total + reg.distance
+          end
+    end
   end
 
   # GET /registres/1
