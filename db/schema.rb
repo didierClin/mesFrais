@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325195335) do
+ActiveRecord::Schema.define(version: 20160330180802) do
 
   create_table "registres", force: :cascade do |t|
     t.string   "motif"
@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20160325195335) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "trajet_id"
   end
 
+  add_index "registres", ["trajet_id"], name: "index_registres_on_trajet_id"
   add_index "registres", ["user_id"], name: "index_registres_on_user_id"
 
   create_table "trajets", force: :cascade do |t|
