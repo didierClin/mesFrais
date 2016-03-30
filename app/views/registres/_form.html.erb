@@ -19,6 +19,11 @@
     <%= f.label :date %><br>
     <%= f.date_select :date %>
   </div>
+  <div >
+    <%= f.label :Trajet %><br>
+    <!-- Add entry form to select trajet_id -->
+    <%= f.collection_select(:trajet_id, Trajet.all, :id, :name, { prompt: "Selectionnez votre trajet:"} ) %>
+  </div>
   <div class="field">
     <%= f.label :'Lieu de départ' %><br>
     <%= f.text_field :origine %>
